@@ -9,8 +9,6 @@ package br.usjt.ardesis.exercicio;
  */
 public class Triangulo extends Poligono {
 
-	
-	double base;
 	double altura;
 	double lado1;
 	double lado2; 
@@ -19,18 +17,12 @@ public class Triangulo extends Poligono {
 	/**
 	 * 
 	 */
-	public Triangulo(double lado1, double lado2, double lado3, double base, double altura)
+	public Triangulo(double lado1, double lado2, double lado3, double altura)
 	{
-		this.base = base;
+		this.lado1 = lado1;
+		this.lado2 = lado2;
+		this.lado3 = lado3;
 		this.altura = altura;
-	}
-
-	public double getBase() {
-		return base;
-	}
-
-	public void setBase(double base) {
-		this.base = base;
 	}
 
 	public double getAltura() {
@@ -63,10 +55,11 @@ public class Triangulo extends Poligono {
 	public void setLado3(double lado3) {
 		this.lado3 = lado3;
 	}
+	
 
 	@Override
 	public double area() {
-		return (base*altura)/2;
+		return (lado1*altura)/2;
 	}
 
 	@Override
